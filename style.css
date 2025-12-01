@@ -1,0 +1,173 @@
+/* === Base === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+}
+
+/* === Navbar === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  padding: 0.7rem 3rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.navbar a:hover {
+  color: #e28a17;
+}
+
+.navbar a.active {
+  color: #e28a17;
+  font-weight: 600;
+}
+
+/* === Main layout === */
+.page {
+  max-width: 950px;
+  margin: 2.5rem auto 3rem;
+  padding: 0 3rem;
+}
+
+/* === Headings === */
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.3rem;
+}
+
+h1 strong {
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  text-transform: lowercase;
+}
+
+/* underline like Eritas site */
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: 0.4rem;
+  background-color: #f0a435;
+}
+
+/* === About page layout (index) === */
+.about-wrapper {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.about-main {
+  flex: 2;
+}
+
+.about-side {
+  flex: 1;
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+}
+
+/* image card */
+.about-side img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+/* === News list === */
+.news-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  column-gap: 2rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.news-date {
+  font-weight: 600;
+}
+
+/* === Publications === */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pub-item {
+  margin-bottom: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-authors {
+  color: #555;
+}
+
+.pub-venue {
+  font-style: italic;
+}
+
+/* === Misc === */
+a {
+  color: #e28a17;
+}
+
+a:hover {
+  color: #c57311;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* === Responsive === */
+@media (max-width: 800px) {
+  .navbar {
+    justify-content: center;
+    padding: 0.7rem 1.2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .page {
+    padding: 0 1.5rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    row-gap: 0.1rem;
+  }
+}
