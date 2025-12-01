@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Qier An</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar: About is active -->
+  <nav class="navbar">
+    <a href="index.html" class="active">About</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="cv.html">CV</a>
+    <a href="outside.html">Outside research</a> <!-- delete if you don't want this tab -->
+  </nav>
+
+  <main class="page">
+    <section class="about-wrapper">
+      <div class="about-main">
+        <h1><strong>Qier</strong> An</h1>
+
+        <p>
+          I am a PhD candidate in the
+          <a href="https://physics-astronomy.jhu.edu/" target="_blank">William H. Miller III Department of
+Physics & Astronomy </a> at Johns Hopkins University.
+          I am broadly interested in detection and characterization of substellar objects.
+          Before graduate school, I studied Physics, Math and Astronomy at UIUC.
+        </p>
+
+        <p>Email: <a href="mailto:qan4@jh.edu">qan4@jh.edu</a></p>
+      </div>
+
+      <aside class="about-side">
+        <img src="img/profile.jpg" alt="Photo of Qier An">
+        <p>
+          3400 N. Charles Street <br>
+          Baltimore, MD 21218
+        </p>
+      </aside>
+    </section>
+
+    <!-- News lives on About page-->
+    <section>
+      <h2>news</h2>
+
+      <div class="news-item">
+        <div class="news-date">Oct 21, 2025</div>
+        <div>We identifyied a brown dwarf orbiting a red dwarf, by first time applying Gaia acceleration in orbit fit, check <a href="https://physics-astronomy.jhu.edu/2025/10/21/qier-an-co-authors-publication-identifying-a-brown-dwarf-orbiting-a-red-dwarf/">press release here</a>.</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Sep 26, 2025</div>
+        <div>Our paper “Orbits and Masses for 156 Companions from Combined Astrometry and Radial Velocities, and a Validation of Gaia Non-single-star Solutions” was published in AJ.</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Dec 12, 2024</div>
+        <div>Our paper “Significant mutual inclinations between the stellar spin and the orbits of both planets in the HAT-P-11 system” was published in AJ.</div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Qier An
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
