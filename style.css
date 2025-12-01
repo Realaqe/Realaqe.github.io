@@ -60,7 +60,7 @@ h2 {
   margin-top: 3rem;
   margin-bottom: 0.8rem;
   font-size: 1.3rem;
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 /* underline like Eritas site */
