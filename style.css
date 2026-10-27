@@ -180,3 +180,41 @@ footer {
 .cv-pubs .pub-item {
   padding-left: 0.2rem;
 }
+
+/* === Research page === */
+.research-links {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project p {
+  margin-top: 0;
+}
+
+.project-papers {
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.project-papers li {
+  margin-bottom: 0.5rem;
+}
+
+.project-fig {
+  margin: 0 0 1rem;
+}
+
+.project-fig img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-fig figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
