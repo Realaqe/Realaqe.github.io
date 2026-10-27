@@ -218,3 +218,35 @@ footer {
   color: #666;
   margin-top: 0.3rem;
 }
+
+/* figure rows on the Research page */
+.fig-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  align-items: start;
+  margin: 1rem 0 0.4rem;
+}
+
+.fig-row.single {
+  grid-template-columns: minmax(0, 420px);
+}
+
+.fig-row .project-fig {
+  margin: 0;
+}
+
+.project-fig img {
+  max-width: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 6px;
+}
+
+.project-fig.wide {
+  margin: 1.4rem 0 1.2rem;
+}
+
+.project-fig.wide img {
+  max-width: 820px;
+}

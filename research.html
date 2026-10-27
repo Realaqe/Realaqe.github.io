@@ -30,6 +30,14 @@
       three-dimensional orbits, and use them to study how these objects form and evolve.
     </p>
 
+    <figure class="project-fig wide">
+      <img src="imag/research/skypath.jpg" alt="Four panels: a straight proper-motion line, a parallax ellipse, an orbital ellipse, and their sum, a wobbling sky path" loading="lazy">
+      <figcaption>
+        A star's path on the sky is the sum of its proper motion, its parallax, and the
+        reflex orbit induced by a companion. Measuring that last term gives the companion's mass.
+      </figcaption>
+    </figure>
+
     <p class="research-links">
       Full publication list:
       <a href="https://ui.adsabs.harvard.edu/public-libraries/m3txZZ03Q32A5tZ2RYVNDg" target="_blank">ADS Library</a>
@@ -43,11 +51,13 @@
     ===========================
     <section class="project">
       <h2>Project title</h2>
-      <figure class="project-fig">
-        <img src="imag/your-figure.png" alt="Short description of the figure">
-        <figcaption>One-line caption.</figcaption>
-      </figure>
       <p>Two or three sentences on the question and what you found.</p>
+      <div class="fig-row">
+        <figure class="project-fig">
+          <img src="imag/research/your-figure.jpg" alt="Short description" loading="lazy">
+          <figcaption>One-line caption.</figcaption>
+        </figure>
+      </div>
       <ul class="project-papers">
         <li><strong>An, Q.</strong>, et al. YEAR, <a href="ADS-LINK" target="_blank">Journal, Vol, Page</a> — Title</li>
       </ul>
@@ -58,13 +68,31 @@
     <section class="project">
       <h2>Orbits and masses from Hipparcos–Gaia astrometry</h2>
       <p>
-        The 25-year baseline between Hipparcos and Gaia reveals the slow acceleration a
-        long-period companion induces on its host star. Combined with radial velocities, it
-        breaks the mass–inclination degeneracy of radial velocities alone. I fit orbits and
-        masses for a sample of 156 companions this way and used the results to test
-        the orbital solutions in Gaia's Non-Single Star catalog. This independent check matters
-        for interpreting the much larger exoplanet yield expected from the next Gaia data release.
+        Hipparcos measured about 100,000 bright stars around 1991, and Gaia measured them again
+        around 2016. Comparing the proper motions from each mission with the long-term
+        proper motion over the 25-year gap reveals the slow acceleration that a long-period
+        companion induces on its host star. Combined with radial velocities, this breaks the
+        mass–inclination degeneracy of radial velocities alone. Using the open-source code
+        <em>orvara</em>, I fit orbits and dynamical masses for 156 companions (planets, brown dwarfs,
+        and stars) in a uniform way. The catalog clearly shows the brown-dwarf desert, and it is the
+        reference sample I use to test Gaia's own orbital solutions.
       </p>
+      <div class="fig-row">
+        <figure class="project-fig">
+          <img src="imag/research/hgca_three_pm.jpg" alt="Sketch of a star's orbit around the barycenter with Hipparcos, Gaia, and long-term Hipparcos–Gaia proper-motion vectors" loading="lazy">
+          <figcaption>
+            Three proper motions: Hipparcos (1991), Gaia (2016), and the position difference
+            over 25 years. Their disagreement measures the star's acceleration.
+          </figcaption>
+        </figure>
+        <figure class="project-fig">
+          <img src="imag/research/catalog_mass_sep.jpg" alt="Companion mass versus semi-major axis for 156 companions, colored by eccentricity, with a histogram showing the brown-dwarf desert" loading="lazy">
+          <figcaption>
+            Dynamical masses and separations for the 156 companions, colored by eccentricity.
+            Note the brown-dwarf desert (An et al. 2025).
+          </figcaption>
+        </figure>
+      </div>
       <ul class="project-papers">
         <li>
           <strong>An, Q.</strong>, Brandt, T. D., Brandt, G. M., &amp; Venner, A. 2025,
@@ -87,10 +115,20 @@
         Knowing a companion's full orbital orientation lets us ask how a system is tilted,
         not just how massive its planets are. In HAT-P-11, I combined astrometry and radial
         velocities with the stellar spin to show that the orbits of both planets are
-        significantly inclined, relative to each other and to the star. In a companion
+        significantly inclined, relative to each other and to the star. This was the first
+        spin–orbit angle measured for a non-transiting outer giant planet. In a companion
         paper, we traced this geometry to an early history of planet–planet scattering
         followed by von Zeipel–Lidov–Kozai migration.
       </p>
+      <div class="fig-row single">
+        <figure class="project-fig">
+          <img src="imag/research/hatp11_geometry.jpg" alt="3D sketch of HAT-P-11 c's orbit tilted relative to the star, with the spin–orbit angle psi marked" loading="lazy">
+          <figcaption>
+            The orbit of HAT-P-11 c (gray) and its angular momentum (blue) relative to the
+            star. ψ is the spin–orbit angle (An et al. 2025).
+          </figcaption>
+        </figure>
+      </div>
       <ul class="project-papers">
         <li>
           <strong>An, Q.</strong>, Lu, T., Brandt, G. M., Brandt, T. D., &amp; Li, G. 2025,
@@ -108,24 +146,67 @@
 
     <!-- Project 3 -->
     <section class="project">
-      <h2>Finding and weighing companions with direct imaging</h2>
+      <h2>Gaia-only accelerations: orbits for stars Hipparcos never saw</h2>
       <p>
-        Astrometric accelerations point to stars likely to host a massive companion, and
-        high-contrast imaging can then catch the companion directly. I observe with Keck/NIRC2
-        and Subaru/SCExAO-CHARIS as part of the OASIS survey and fit the resulting relative
-        astrometry jointly with Gaia and radial-velocity data. This approach yielded a
-        brown dwarf around the nearby M dwarf LSPM J1446+4633
-        (<a href="https://physics-astronomy.jhu.edu/2025/10/21/qier-an-co-authors-publication-identifying-a-brown-dwarf-orbiting-a-red-dwarf/" target="_blank">JHU news</a>)
-        and two new substellar companions from OASIS
-        (<a href="https://subarutelescope.org/en/results/2025/12/03/3626.html" target="_blank">Subaru press release</a>).
-        I am also a Co-I on JWST Cycle 5 GO 10758.
+        Most Gaia stars, including nearly all nearby M dwarfs, were too faint for Hipparcos,
+        so the Hipparcos–Gaia method cannot reach them. For many of these stars, Gaia DR3 fits
+        an acceleration of its own. A 7-parameter solution adds an acceleration to the usual
+        five astrometric parameters, and a 9-parameter solution also adds a jerk. I extended
+        <em>orvara</em> to fit these solutions directly, together with radial velocities and imaging,
+        while converting Gaia's photocenter motion into the motion of the host star.
       </p>
+      <p>
+        Can these solutions be trusted? Testing them against systems whose orbits we already
+        know, I find that Gaia's accelerations agree in direction and size but scatter by
+        about twice their quoted errors. Orbital solutions near the long-period edge of Gaia's
+        period grid can also be spurious. A second test, which matches every DR3 acceleration
+        solution against resolved pairs in the Washington Double Star catalog, checks whether
+        Gaia's accelerations point toward known companions (in prep).
+      </p>
+      <p>
+        The framework already makes discoveries. By combining Subaru/IRD radial velocities, a
+        Keck image, and the Gaia acceleration, we measured a 60 Jupiter-mass brown dwarf orbiting
+        the M dwarf LSPM J1446+4633 at 4.3 au, with a mass precise to about 1.5 Jupiter
+        masses (<a href="https://physics-astronomy.jhu.edu/2025/10/21/qier-an-co-authors-publication-identifying-a-brown-dwarf-orbiting-a-red-dwarf/" target="_blank">JHU news</a>).
+        Brown dwarfs around such low-mass stars sit inside the brown-dwarf desert in mass but
+        far above it in mass ratio, so they help show whether the desert is set by the
+        companion's mass or by its mass relative to the star. Gaia DR4 will provide
+        epoch astrometry for every star. Rather than simply adopting Gaia's solutions, I plan to
+        refit them within this framework.
+      </p>
+      <div class="fig-row">
+        <figure class="project-fig">
+          <img src="imag/research/known_orbits_test.jpg" alt="Gaia DR3 accelerations plotted against accelerations predicted from joint orbit fits, following the one-to-one line" loading="lazy">
+          <figcaption>
+            Known Orbits Test: Gaia DR3 accelerations against predictions from our joint
+            orbits (An et al. 2025).
+          </figcaption>
+        </figure>
+        <figure class="project-fig">
+          <img src="imag/research/j1446_image.jpg" alt="High-contrast image of LSPM J1446+4633 with an arrow marking the faint brown-dwarf companion" loading="lazy">
+          <figcaption>
+            Direct image of the brown dwarf LSPM J1446+4633 B (arrow).
+          </figcaption>
+        </figure>
+        <figure class="project-fig">
+          <img src="imag/research/j1446_orbit.jpg" alt="Fitted orbit of LSPM J1446+4633 B on the sky, colored by companion mass, with Gaia's acceleration vector" loading="lazy">
+          <figcaption>
+            Orbit of J1446 B, colored by mass. The red arrow is Gaia's measured
+            acceleration (Uyama et al. 2025).
+          </figcaption>
+        </figure>
+      </div>
       <ul class="project-papers">
         <li>
           Uyama, T., Kuzuhara, M., Beichman, C., …, <strong>An, Q.</strong>, et al. 2025,
           <a href="https://ui.adsabs.harvard.edu/abs/2025AJ....170..272U/abstract" target="_blank">AJ, 170, 272</a> —
           Direct Imaging Explorations for Companions from the Subaru/IRD Strategic Program II;
           Discovery of a Brown-dwarf Companion around a Nearby Mid-M-dwarf LSPM J1446+4633
+        </li>
+        <li>
+          <strong>An, Q.</strong>, Brandt, T. D., Brandt, G. M., &amp; Venner, A. 2025,
+          <a href="https://ui.adsabs.harvard.edu/abs/2025ApJS..280...61A/abstract" target="_blank">ApJS, 280, 61</a> —
+          validation of Gaia DR3 acceleration and orbital solutions (Known Orbits Test)
         </li>
       </ul>
     </section>
